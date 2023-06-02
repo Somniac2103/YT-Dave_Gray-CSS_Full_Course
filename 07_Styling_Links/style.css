@@ -1,0 +1,45 @@
+/* Typography*/
+
+body
+{
+  padding: 10%;
+  font-size: 2rem;  
+  color: black;
+}
+
+/* input, button
+{
+  font: inherit;
+}
+*/
+
+/*Text Settings*/
+
+p
+{
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-align: left;
+  text-indent: 2em;
+}
+
+p
+{
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  word-spacing: 0.3em;
+}
+
+p
+{
+  font-weight: 600;
+  font-style: italic;
+  font-family: serif;
+  font-family: sans-serif;
+  font-family: monospace;
+  font-family: cursive;
+  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
