@@ -1,45 +1,39 @@
-/* Typography*/
+/*Lesson 7 Styling links*/
 
 body
 {
   padding: 10%;
   font-size: 2rem;  
-  color: black;
+  font-family:'roboto',sans-serif;
 }
 
-/* input, button
+a 
 {
-  font: inherit;
+  /* default
+   text-decoration: none;
+  cursor: pointer;
+  color: blue; */
+  color: black;
+
 }
+
+/*pseudo class
+order matters due to specificity visited, hover, active
 */
 
-/*Text Settings*/
+a:visited
+  {
+    color: purple;
 
-p
+  }
+
+a:hover, a:focus
 {
-  text-decoration: underline;
-  text-transform: capitalize;
-  text-align: left;
-  text-indent: 2em;
+  /* color: dodgerblue; */
+  opacity: 0.7;
 }
 
-p
+a:active
 {
-  line-height: 1.5;
-  letter-spacing: 0.1em;
-  word-spacing: 0.3em;
+  color: red;
 }
-
-p
-{
-  font-weight: 600;
-  font-style: italic;
-  font-family: serif;
-  font-family: sans-serif;
-  font-family: monospace;
-  font-family: cursive;
-  font-family: fantasy;
-  font-family: 'Courier New', Courier, monospace;
-
-}
-
