@@ -20,6 +20,9 @@ img{
 }
 
 /* || GENERAL STYLES */
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font: 1.5rem "Nunito", sans-serif;
@@ -73,7 +76,7 @@ footer {
 }
 
 /* || PROFILE CARD */
-.card{
+.card {
   scroll-margin-top: 8rem;
   width: min(100%, 350px);
   background-color: #cbd5e1;
@@ -104,52 +107,80 @@ footer {
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
-  body {
-    background-color: green;
-    background-image: radial-gradient(whitesmoke, green);
+  main{
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
   }
-  nav {
-    display: none;
+
+  .card{
+    width: min(100%, 400px);
+  }
+  .card:last-child{
+    order:-1;
   }
 }
 
 /* || MEDIUM */
 @media screen and (min-width: 768px) {
-  body {
-    background-color: gold;
-    background-image: radial-gradient(whitesmoke, gold);
+  nav{
+    display: none;
   }
+
+  .card{
+    width: min(100%, 325px);
+  }
+  .card figure{
+    flex-flow:column-reverse;
+  }
+  .card figcaption {
+    margin: 0.1em 0;
+  }
+  .card p{
+    margin-top: 1rem;
+  }
+
 }
 
 /* || LARGE */
 @media screen and (min-width: 992px) {
-  body {
-    background-color: firebrick;
-    background-image: radial-gradient(whitesmoke, firebrick);
+  .card{
+    width: min(100%, 400px);
+  }
+  .card:nth-child(2){
+    order:-1;
   }
 }
 
 /* || XL  */
 @media screen and (min-width: 1200px) {
-  body {
-    background-color: rebeccapurple;
-    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  .card {
+    width: min(calc(33% - 1rem), 500px);
   }
 }
 
 /* || MOBILE DEVICE LANDSCAPE  */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-  body {
-    background-color: dodgerblue;
-    background-image: radial-gradient(whitesmoke, dodgerblue);
-  }
-
-  h1,
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  nav {
+ h1{
+  font-size: 1.5rem;
+ }
+ 
+ nav {
     display: none;
   }
+
+main {
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.card{
+  width: min(calc(33% - 0.25rem), 200px);
+}
+
+.card figcaption, .card p{
+  font: size 1.25rem;
+
+}
 }
