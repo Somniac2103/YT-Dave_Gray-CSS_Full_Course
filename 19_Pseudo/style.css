@@ -55,12 +55,16 @@ nav {
   justify-content: space-evenly;  
 }
 
-nav a , nav a:visited {
+nav a:any-link{
   color: #000;
 }
 
-nav a:hover , nav a:focus {
+nav :is(a:hover , a:focus) {
   color: hsla(0, 0%, 20%, 0.6);
+}
+
+nav a:active{
+  color: red;
 }
 main {
   flex-grow: 1;
@@ -86,6 +90,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card:target{
+  border: 2px solid rebeccapurple;
 }
 
 .card figure {
